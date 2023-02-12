@@ -16,34 +16,34 @@ loop do
   
   if option == 1
     print 'Digite o primeiro número: '
-    year_of_birth = gets.chomp.to_i
+    number_one = gets.chomp.to_i
     print 'Digite o segundo número: '
-    current_year = gets.chomp.to_i
-    age = current_year + year_of_birth
+    number_two = gets.chomp.to_i
+    age = number_two + number_one
     result = "A soma dos dois valores é: #{age}"
 
   elsif option == 2
     print 'Digite o primeiro número: '
-    year_of_birth = gets.chomp.to_i
+    number_one = gets.chomp.to_i
     print 'Digite o segundo número: '
-    current_year = gets.chomp.to_i
-    age = year_of_birth - current_year
+    number_two = gets.chomp.to_i
+    age = number_one - number_two
     result = "A subtração dos dois valores é: #{age}"
   
   elsif option == 3
     print 'Digite o primeiro número: '
-    year_of_birth = gets.chomp.to_i
+    number_one = gets.chomp.to_i
     print 'Digite o segundo número: '
-    current_year = gets.chomp.to_i
-    age =  year_of_birth / current_year
+    number_two = gets.chomp.to_i
+    age =  number_one / number_two
     result = "A divisão dos dois valores é: #{age}"
 
   elsif option == 4
     print 'Digite o primeiro número: '
-    year_of_birth = gets.chomp.to_i
+    number_one = gets.chomp.to_i
     print 'Digite o segundo número: '
-    current_year = gets.chomp.to_i
-    age = year_of_birth * current_year
+    number_two = gets.chomp.to_i
+    age = number_one * number_two
     result = "A multiplicação dos dois valores é: #{age}"
 
   elsif option == 0 
@@ -54,3 +54,45 @@ loop do
   # Comando que limpa o console
   system "clear"
 end
+
+
+
+# correção do exercicio
+=begin result = ''
+loop do
+ puts result 
+ puts 'Selecione uma das seguintes opções'
+ puts '1- Adicionar'
+ puts '2- Subtrair'
+ puts '3- Multiplicar'
+ puts '4- Dividir'
+ puts '0- Sair'
+ print 'Opção: '
+ 
+ option = gets.chomp.to_i
+ 
+ case option 
+ when 1..4
+   print 'Digite o primeiro número: '
+   number1 = gets.chomp.to_i
+   
+   print 'Digite o segundo número: '
+   number2 = gets.chomp.to_i
+   case option 
+   when 1
+     result = "#{number1} + #{number2} = #{number1 + number2}"
+   when 2
+     result = "#{number1} - #{number2} = #{number1 - number2}"
+   when 3
+     result = "#{number1} * #{number2} = #{number1 * number2}"
+   when 4
+     result = "#{number1} / #{number2} = #{number1 / number2}"
+   end
+ when 0
+   break
+ else 
+   result = 'Opção inválida'
+ end
+ # Comando que limpa o console
+ system "clear"
+end =end
